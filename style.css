@@ -110,10 +110,11 @@ body {
       rgba(240, 240, 240, 0.144),
       rgba(255, 255, 255, 0.336)
     ),
-    url("https://i.postimg.cc/wT3TQS3V/header-image2.jpg");
+    url("images/bg.jpg") no-repeat center center/cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: brightness(80%);
 }
 
 .showcase-container {
@@ -123,6 +124,11 @@ body {
   justify-content: center;
   height: 100%;
   font-size: 1.6rem;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+  z-index: 5;
+  color: whitesmoke;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .main-title {
@@ -287,7 +293,7 @@ body {
 .food-menu-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 0px 30px 0px;
+  padding: 100px 0px 100px 0px;
 }
 
 .food-menu-container img {
@@ -297,6 +303,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
+  justify-content: center;
 }
 
 .food-menu-item {
@@ -378,11 +385,17 @@ body {
 #contact {
   padding: 5rem 0;
   background: rgb(226, 226, 226);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #555;
 }
 
 .contact-container {
   display: flex;
-  background: #fff;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 1rem;
 }
 
 .contact-img {
@@ -397,10 +410,60 @@ body {
   object-fit: cover;
 }
 
-.form-container {
-  padding: 1rem;
-  width: 50%;
-  margin: auto;
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.social-button {
+  display: flex;
+  align-items: center;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 24px;
+  transition: background-color 0.3s;
+  width: auto;
+}
+.social-button span {
+  margin-right: 10px;
+}
+.social-button i {
+  font-size: 32px;
+}
+.social-button.instagram {
+  background-color: #e4405f;
+}
+.social-button.facebook {
+  background-color: #3b5998;
+}
+.social-button:hover {
+  opacity: 0.8;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+  .icon-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .social-button {
+    margin: 20px;
+    font-size: 20px;
+    padding: 20px;
+  }
+  .social-button i {
+    font-size: 40px;
+  }
+  .social-button span {
+    margin-right: auto;
+  }
 }
 
 .form-container input {
@@ -575,6 +638,7 @@ body {
   }
   .form-container {
     width: 90%;
+    text-align: center;
   }
   .contact-container {
     display: flex;
